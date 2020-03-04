@@ -7,7 +7,7 @@ import java.util.Map;
  * @Author: ls
  * @Date: 2020/2/24 22:21
  */
-public class RomanToInt {
+public class RomanToInt_13 {
     /**
      * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
      * 字符          数值
