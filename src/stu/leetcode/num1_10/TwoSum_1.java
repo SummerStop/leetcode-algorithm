@@ -25,7 +25,7 @@ public class TwoSum_1 {
         Map<Integer,Integer> map = new HashMap((int)(nums.length/0.75F+1F));
         for(int i = 0;i < nums.length;i ++){
             if(map.containsKey(target-nums[i])){
-                result[0] = (int)map.get(target-nums[i]);
+                result[0] = map.get(target-nums[i]);
                 result[1] = i;
                 break;
             }
