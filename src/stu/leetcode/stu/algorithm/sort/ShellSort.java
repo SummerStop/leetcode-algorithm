@@ -1,6 +1,8 @@
 package stu.leetcode.stu.algorithm.sort;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: ls
@@ -24,6 +26,7 @@ public class ShellSort {
   public static void main(String[] args) {
     int[] arr = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
     new ShellSort().shellSort(arr);
+    Map<String,String> map = new HashMap<>();
     System.out.println(Arrays.toString(arr));
   }
 }
