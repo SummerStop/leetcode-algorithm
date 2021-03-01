@@ -1,5 +1,7 @@
 package stu.leetcode.num1_10;
 
+import static sun.swing.MenuItemLayoutHelper.max;
+
 /**
  * @Author: ls
  * @Date: 2020/2/23 11:27
@@ -33,6 +35,21 @@ public class LengthOfLongestSubstring_3 {
         return dp[s.length()];
     }
 
+    // 滑动窗口法
+    public int fun(String s){
+        if(s == null ||s.isEmpty()){
+            return 0;
+        }
+        int l = 0;
+        int[] arr = new int[s.length()+1];
+        for(int i = 0;i < s.length();i ++){
+            if(s.substring(l,i).indexOf(s.charAt(i)) != -1){
+                l = s.indexOf(s.charAt(i),l) + 1;
+            }
+            arr[i+1] = max(arr[i],i-l+1);
+        }
+        return arr[s.length()];
+    }
     //憨憨做法  意思一样，但是没有上述简洁，使用了变量代替数组来保存结果
 //    public int lengthOfLongestSubstring(String s) {
 //        int count = 0;
@@ -52,5 +69,9 @@ public class LengthOfLongestSubstring_3 {
 //        }
 //        return count;
 //    }
+
+    public static void main(String[] args) {
+        System.out.println(new LengthOfLongestSubstring_3().fun("abcabcbb"));
+    }
 
 }

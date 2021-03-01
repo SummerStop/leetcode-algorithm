@@ -1,4 +1,4 @@
-package stu.leetcode.stu.algorithm.sort;
+package stu.algorithm.sort;
 
 import java.util.Arrays;
 
